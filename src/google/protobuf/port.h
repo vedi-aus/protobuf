@@ -216,6 +216,8 @@ template <typename T>
 struct is_supported_integral_type
     : absl::disjunction<std::is_same<T, int32_t>, std::is_same<T, uint32_t>,
                         std::is_same<T, int64_t>, std::is_same<T, uint64_t>,
+                        std::is_same<T, int>, std::is_same<T, unsigned int>,
+                        std::is_same<T, long>, std::is_same<T, unsigned long>,
                         std::is_same<T, bool>> {};
 
 template <typename T>
